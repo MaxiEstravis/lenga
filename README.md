@@ -14,6 +14,6 @@ This repository contains scripts and files aimed at improving and annotating _de
 
 **Command line examples:**
 
-python lenga.py <name of experiment> <path to FASTA file> <path to BLAT binary> <path to Exonerate suite>
+python lenga.py name_of_experiment /path/to/FASTA/file /path/to/BLAT/binary /path/to/Exonerate/suite
 
-python annotation.py <path to FASTA file> <path to UniProt reference file> <path to BLAT binary> <path to TranSeq binary from EMBOSS> <path to merge_psl_by_query.php>
+python annotation.py /path/to/FASTA/file /path/to/UniProt/reference/file /path/to/BLAT/binary /path/to/TranSeq/binary/from/EMBOSS /path/to/merge_psl_by_query.php
