@@ -1,11 +1,19 @@
 # lenga
 
-This repository contains scripts and files aimed at improving and annotating de novo RNA-seq assemblies
+This repository contains scripts and files aimed at improving and annotating _de novo_ RNA-seq assemblies
 
-- lenga.zip contains an initialization file that the researcher must complete with paths to input files and binaries.
-  The structure of the zipped file must be conserved (a common directory containing all files and the scripts/ directory).
-  Once the lenga.ini file has been correctly completed, lenga.py can be called in its directory with python2.
+- lenga.py (with its companion folder _scripts_) improves _de novo_ RNA-seq assemblies by eliminating redundant contigs and extending those with more than a certain overlap but considered separate contigs by the assembler.
 
-- ceg.zip contains a python2 script, a cutoff table and a directory with 248 CEGs (Core Eukaryotic Genes) HMMs (Hidden Markov Models) (Parra, G., Bradnam, K. & Korf, I. CEGMA: a pipeline to accurately annotate core genes in eukaryotic genomes. Bioinformatics 23, 1061–1067 (2007)). 
+- annotation.py (with its companion script merge_psl_by_query.php) allows the researcher to annotate an RNA-seq assembly against any sub-set of UniProt peptidic sequences. The script translates each contig into its 6 frames and retains the longest ORF per frame for a 
 
-- SSR_predictions contains 4 tab-delimited tables with SSR predictions for Nothofagus pumilio RNA-seq assemblies.
+**Third party software requirements:**
+
+- BLAT: http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/blat/
+- Exonerate: http://www.ebi.ac.uk/about/vertebrate-genomics/software/exonerate
+- Transeq, from the EMBOSS suite: http://emboss.sourceforge.net/download/
+
+**Command line examples:**
+
+python lenga.py <name of experiment> <path to FASTA file> <path to BLAT binary> <path to Exonerate suite>
+
+python annotation.py <path to FASTA file> <path to UniProt reference file> <path to BLAT binary> <path to TranSeq binary from EMBOSS> <path to merge_psl_by_query.php>
