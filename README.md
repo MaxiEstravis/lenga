@@ -4,7 +4,7 @@ This repository contains scripts and files aimed at improving and annotating _de
 
 - lenga.py (with its companion folder _scripts_) improves _de novo_ RNA-seq assemblies by eliminating redundant contigs and extending those with more than a certain overlap but considered separate contigs by the assembler.
 
-- annotation.py (with its companion script merge_psl_by_query.php) allows the researcher to annotate an RNA-seq assembly against any sub-set of UniProt peptidic sequences. The script translates each contig into its 6 frames and retains the longest ORF per frame for a 
+- annotation.py (with its companion script merge_psl_by_query.php) allows the researcher to annotate an RNA-seq assembly against any sub-set of UniProt peptidic sequences. The script translates each contig into its 6 frames and retains the longest ORF per frame for annotation. 
 
 **Third party software requirements:**
 
