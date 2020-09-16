@@ -1,6 +1,6 @@
 # lenga
 
-This repository contains scripts and files aimed at improving and annotating _de novo_ RNA-seq assemblies
+This repository contains scripts aimed at improving and annotating _de novo_ RNA-seq assemblies
 
 - lenga.py (with its companion folder _scripts_) improves _de novo_ RNA-seq assemblies by eliminating redundant contigs and extending those with more than a certain overlap but considered separate contigs by the assembler.
 
